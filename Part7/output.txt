@@ -1,0 +1,17 @@
+Part 7: make
+main.c calls add() from utils.c (declared in utils.h). The Makefile is the one from the lab sheet.
+
+$ make
+gcc -Wall -c main.c
+gcc -Wall -c utils.c
+gcc -Wall -o myapp main.o utils.o
+$ ./myapp
+2 + 3 = 5
+
+$ make clean
+rm -f *.o myapp
+
+$ make -j4          (builds main.o and utils.o at the same time)
+gcc -Wall -c main.c
+gcc -Wall -c utils.c
+gcc -Wall -o myapp main.o utils.o

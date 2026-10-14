@@ -1,0 +1,4 @@
+myapp
+*.o
+parallel_add
+.DS_Store
